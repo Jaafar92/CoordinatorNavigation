@@ -11,6 +11,12 @@
 		A922EB462916E0C50083B773 /* CoordinatorNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A922EB3B2916E0C50083B773 /* CoordinatorNavigation.framework */; };
 		A922EB4B2916E0C50083B773 /* CoordinatorNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A922EB4A2916E0C50083B773 /* CoordinatorNavigationTests.swift */; };
 		A922EB4C2916E0C50083B773 /* CoordinatorNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = A922EB3E2916E0C50083B773 /* CoordinatorNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A922EB582916E1FD0083B773 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A922EB572916E1FD0083B773 /* Coordinator.swift */; };
+		A922EB5E2916E6130083B773 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A922EB5B2916E6130083B773 /* BaseUIViewController.swift */; };
+		A922EB5F2916E6130083B773 /* BaseUIHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A922EB5C2916E6130083B773 /* BaseUIHostingController.swift */; };
+		A922EB602916E6130083B773 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A922EB5D2916E6130083B773 /* BaseView.swift */; };
+		A922EB622916E65E0083B773 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A922EB612916E65E0083B773 /* BaseCoordinator.swift */; };
+		A922EB842917DA060083B773 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A922EB832917DA060083B773 /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,12 @@
 		A922EB3F2916E0C50083B773 /* CoordinatorNavigation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = CoordinatorNavigation.docc; sourceTree = "<group>"; };
 		A922EB452916E0C50083B773 /* CoordinatorNavigationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorNavigationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A922EB4A2916E0C50083B773 /* CoordinatorNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorNavigationTests.swift; sourceTree = "<group>"; };
+		A922EB572916E1FD0083B773 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A922EB5B2916E6130083B773 /* BaseUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
+		A922EB5C2916E6130083B773 /* BaseUIHostingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUIHostingController.swift; sourceTree = "<group>"; };
+		A922EB5D2916E6130083B773 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		A922EB612916E65E0083B773 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		A922EB832917DA060083B773 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,8 @@
 		A922EB3D2916E0C50083B773 /* CoordinatorNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				A922EB592916E5F30083B773 /* Coordination */,
+				A922EB552916E1FD0083B773 /* Protocols */,
 				A922EB3E2916E0C50083B773 /* CoordinatorNavigation.h */,
 				A922EB3F2916E0C50083B773 /* CoordinatorNavigation.docc */,
 			);
@@ -83,6 +97,42 @@
 				A922EB4A2916E0C50083B773 /* CoordinatorNavigationTests.swift */,
 			);
 			path = CoordinatorNavigationTests;
+			sourceTree = "<group>";
+		};
+		A922EB552916E1FD0083B773 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A922EB562916E1FD0083B773 /* Coordinator */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A922EB562916E1FD0083B773 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A922EB572916E1FD0083B773 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A922EB592916E5F30083B773 /* Coordination */ = {
+			isa = PBXGroup;
+			children = (
+				A922EB5A2916E6130083B773 /* Base */,
+			);
+			path = Coordination;
+			sourceTree = "<group>";
+		};
+		A922EB5A2916E6130083B773 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A922EB612916E65E0083B773 /* BaseCoordinator.swift */,
+				A922EB5B2916E6130083B773 /* BaseUIViewController.swift */,
+				A922EB5C2916E6130083B773 /* BaseUIHostingController.swift */,
+				A922EB5D2916E6130083B773 /* BaseView.swift */,
+				A922EB832917DA060083B773 /* BaseViewModel.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +244,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A922EB5E2916E6130083B773 /* BaseUIViewController.swift in Sources */,
+				A922EB622916E65E0083B773 /* BaseCoordinator.swift in Sources */,
+				A922EB5F2916E6130083B773 /* BaseUIHostingController.swift in Sources */,
+				A922EB842917DA060083B773 /* BaseViewModel.swift in Sources */,
+				A922EB602916E6130083B773 /* BaseView.swift in Sources */,
+				A922EB582916E1FD0083B773 /* Coordinator.swift in Sources */,
 				A922EB402916E0C50083B773 /* CoordinatorNavigation.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +396,7 @@
 		A922EB502916E0C50083B773 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -368,6 +425,7 @@
 		A922EB512916E0C50083B773 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -396,6 +454,7 @@
 		A922EB532916E0C50083B773 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9KKEDA9RJ4;
@@ -412,6 +471,7 @@
 		A922EB542916E0C50083B773 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9KKEDA9RJ4;
