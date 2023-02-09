@@ -17,6 +17,8 @@
 		A922EB602916E6130083B773 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A922EB5D2916E6130083B773 /* BaseView.swift */; };
 		A922EB622916E65E0083B773 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A922EB612916E65E0083B773 /* BaseCoordinator.swift */; };
 		A922EB842917DA060083B773 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A922EB832917DA060083B773 /* BaseViewModel.swift */; };
+		A998C4F3299589E100E78F58 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998C4F1299589E100E78F58 /* NavigationBarModifier.swift */; };
+		A998C4F4299589E100E78F58 /* JDNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998C4F2299589E100E78F58 /* JDNavigationStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		A922EB5D2916E6130083B773 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		A922EB612916E65E0083B773 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		A922EB832917DA060083B773 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		A998C4F1299589E100E78F58 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		A998C4F2299589E100E78F58 /* JDNavigationStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDNavigationStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		A922EB3D2916E0C50083B773 /* CoordinatorNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				A998C4F02995899900E78F58 /* Navigation */,
 				A922EB592916E5F30083B773 /* Coordination */,
 				A922EB552916E1FD0083B773 /* Protocols */,
 				A922EB3E2916E0C50083B773 /* CoordinatorNavigation.h */,
@@ -133,6 +138,15 @@
 				A922EB832917DA060083B773 /* BaseViewModel.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		A998C4F02995899900E78F58 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A998C4F2299589E100E78F58 /* JDNavigationStack.swift */,
+				A998C4F1299589E100E78F58 /* NavigationBarModifier.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,9 +260,11 @@
 			files = (
 				A922EB5E2916E6130083B773 /* BaseUIViewController.swift in Sources */,
 				A922EB622916E65E0083B773 /* BaseCoordinator.swift in Sources */,
+				A998C4F3299589E100E78F58 /* NavigationBarModifier.swift in Sources */,
 				A922EB5F2916E6130083B773 /* BaseUIHostingController.swift in Sources */,
 				A922EB842917DA060083B773 /* BaseViewModel.swift in Sources */,
 				A922EB602916E6130083B773 /* BaseView.swift in Sources */,
+				A998C4F4299589E100E78F58 /* JDNavigationStack.swift in Sources */,
 				A922EB582916E1FD0083B773 /* Coordinator.swift in Sources */,
 				A922EB402916E0C50083B773 /* CoordinatorNavigation.docc in Sources */,
 			);
