@@ -9,6 +9,7 @@ open class BaseCoordinator : NSObject, Coordinator, UINavigationControllerDelega
     
     public init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        self.navigationController.setNavigationBarHidden(true, animated: false)
     }
     
     open func start() {
