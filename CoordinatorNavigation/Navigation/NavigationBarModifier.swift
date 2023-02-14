@@ -17,7 +17,15 @@ public struct NavigationModifier: ViewModifier {
         let hasTitle = viewModel.pageTitle != nil
         let hasChildrenViews = viewModel.coordinator?.navigationController.viewControllers.count ?? 0 > 1
 
-        if hasTitle && hasChildrenViews {
+        if hasTitle == false {
+            return AnyView(content)
+        }
+
+        if viewModel.showBackOptions == false {
+            return AnyView(content.navigationBarTitle(viewModel.pageTitle ?? "", displayMode: .automatic))
+        }
+
+        if hasChildrenViews {
             return AnyView(
                 content
                     .navigationBarTitle(viewModel.pageTitle ?? "", displayMode: .automatic)
@@ -38,10 +46,6 @@ public struct NavigationModifier: ViewModifier {
             )
         }
 
-        if hasTitle {
-            return AnyView(content.navigationBarTitle(viewModel.pageTitle ?? "", displayMode: .automatic))
-        }
-
-        return AnyView(content)
+        return AnyView(content.navigationBarTitle(viewModel.pageTitle ?? "", displayMode: .automatic))
     }
 }
