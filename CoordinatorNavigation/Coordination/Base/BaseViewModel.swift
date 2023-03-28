@@ -5,7 +5,11 @@ open class BaseViewModel: ObservableObject {
 
     public var showBackOptions: Bool = true
 
-    public var pageTitle: String?
+    @Published public var pageTitle: String?
+    
+    @Published public var isLoading: Bool = false
+    
+    @Published public var loadingMessage: String = ""
 
     public var previousPageTitle: String?
     
@@ -14,5 +18,12 @@ open class BaseViewModel: ObservableObject {
         
     deinit {
         print("\(String(describing: self)) was de-initialized")
+    }
+    
+    public func updateLoadingState(loading: Bool, message: String? = nil) {
+        DispatchQueue.main.async {
+            self.isLoading = loading
+            self.loadingMessage = message ?? ""
+        }
     }
 }

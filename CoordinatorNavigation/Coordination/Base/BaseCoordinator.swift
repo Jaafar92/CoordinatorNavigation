@@ -21,7 +21,9 @@ open class BaseCoordinator : NSObject, Coordinator, UINavigationControllerDelega
     }
     
     public func dismiss() {
-        self.navigationController.dismiss(animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.navigationController.dismiss(animated: true, completion: nil)
+        }
     }
     
     public func navigateBack() {
