@@ -24,6 +24,11 @@ open class BaseUIHostingController<T: View> : BaseView {
         
         self.addChild(swiftUIView)
         self.view.addSubview(swiftUIView.view)
+
+        if let navController = navigationController {
+            navController.interactivePopGestureRecognizer?.delegate = nil
+            navController.interactivePopGestureRecognizer?.isEnabled = true
+        }
         
         setupConstraints()
     }
