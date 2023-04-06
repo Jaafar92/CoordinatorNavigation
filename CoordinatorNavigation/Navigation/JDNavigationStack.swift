@@ -31,5 +31,8 @@ public struct JDNavigationStack<Content: View>: View {
                     action: action))
             }
         }
+        .onDisappear {
+            self.viewModel.unload()
+        }
     }
 }

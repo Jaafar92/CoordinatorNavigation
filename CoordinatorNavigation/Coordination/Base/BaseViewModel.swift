@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 open class BaseViewModel: ObservableObject {
     public weak var coordinator: Coordinator?
@@ -12,6 +13,8 @@ open class BaseViewModel: ObservableObject {
     @Published public var loadingMessage: String = ""
 
     public var previousPageTitle: String?
+
+    public var cancellables = Set<AnyCancellable>()
     
     public init() {
     }
@@ -25,5 +28,13 @@ open class BaseViewModel: ObservableObject {
             self.isLoading = loading
             self.loadingMessage = message ?? ""
         }
+    }
+
+    public func unload() {
+        for cancellable in cancellables {
+            cancellable.cancel()
+        }
+
+        self.cancellables.removeAll()
     }
 }
