@@ -51,6 +51,24 @@ open class BaseCoordinator : NSObject, Coordinator, UINavigationControllerDelega
             childDidFinish(viewController.coordinator)
         }
     }
+
+    public func displayAlert(
+        title: String,
+        message: String,
+        style: UIAlertController.Style,
+        mainActionBtnTxt: String,
+        mainAction: (() -> Void)?
+    ) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: style)
+
+            alert.addAction(UIAlertAction(title: mainActionBtnTxt, style: .default, handler: { _ in
+                mainAction?()
+            }))
+            
+            self.navigationController.present(alert, animated: true, completion: nil)
+        }
+    }
     
     deinit {
         print("\(String(describing: self)) was de-initialized")

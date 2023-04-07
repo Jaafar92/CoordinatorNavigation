@@ -44,4 +44,13 @@ public protocol Coordinator: AnyObject {
      The parent and child is used to recursively remove any child-coordinators, this way de-initializing them.
      */
     func navigateBackToRootClearHistory(parent: Coordinator?, child: Coordinator?)
+
+    /// Displays an alert with the given attributes
+    func displayAlert(
+        title: String,
+        message: String,
+        style: UIAlertController.Style,
+        mainActionBtnTxt: String,
+        mainAction: (() -> Void)?
+    )
 }
