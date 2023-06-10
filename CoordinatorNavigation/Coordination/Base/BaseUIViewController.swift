@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 import Combine
 
@@ -18,3 +19,4 @@ open class BaseUIViewController: BaseView {
         bindings.removeAll()
     }
 }
+#endif

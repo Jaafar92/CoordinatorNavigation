@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 open class BaseCoordinator : NSObject, Coordinator, UINavigationControllerDelegate {
@@ -102,3 +103,4 @@ open class BaseCoordinator : NSObject, Coordinator, UINavigationControllerDelega
         BaseCoordinator.viewControllersDictionary[view.id] = view
     }
 }
+#endif

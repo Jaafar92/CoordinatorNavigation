@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 
 open class BaseView : UIViewController {
@@ -8,3 +9,4 @@ open class BaseView : UIViewController {
         print("\(String(describing: self)) was de-initialized")
     }
 }
+#endif

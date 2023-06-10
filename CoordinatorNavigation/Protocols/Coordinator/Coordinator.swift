@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import Foundation
 import UIKit
 
@@ -54,3 +55,4 @@ public protocol Coordinator: AnyObject {
         mainAction: (() -> Void)?
     )
 }
+#endif

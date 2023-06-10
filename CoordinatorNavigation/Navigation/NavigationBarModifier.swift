@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import Foundation
 import SwiftUI
 
@@ -49,3 +50,4 @@ public struct NavigationModifier: ViewModifier {
         return AnyView(content.navigationBarTitle(viewModel.pageTitle ?? "", displayMode: .automatic))
     }
 }
+#endif

@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import Foundation
 import Combine
 
@@ -38,3 +39,4 @@ open class BaseViewModel: ObservableObject {
         self.cancellables.removeAll()
     }
 }
+#endif

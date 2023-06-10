@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import SwiftUI
 
 public struct JDNavigationStack<Content: View>: View {
@@ -36,3 +37,4 @@ public struct JDNavigationStack<Content: View>: View {
         }
     }
 }
+#endif
